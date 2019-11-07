@@ -1,0 +1,30 @@
+<ion-content no-padding>
+        <ion-row class="row">
+            <div class="">
+            <img src="assets/techno_logo.png">
+            <ion-text>
+              <h2 no-margin margin-vertical text-center>Phone Number Validation</h2>
+            </ion-text>
+          </div>
+            </ion-row>
+          
+
+  <ion-row center style="text-align: center;">
+    <ion-col>
+        <ion-input clearInput type="phone" placeholder="Enter Your Phone Number" [(ngModel)]="phone" class="input"
+        padding-horizontal clear-input="true"></ion-input>
+    </ion-col>
+  </ion-row>
+<ion-row>
+  <img src="assets/otp.gif" style="height: 200px;">
+</ion-row>
+  
+  <ion-row center style="text-align: center; margin-top: 20px">
+    <ion-col>
+        <ion-button expand="block" (click)="login()" color="primary">
+            <strong class="white">
+              Login</strong></ion-button>
+    </ion-col>
+  </ion-row>
+  
+</ion-content>

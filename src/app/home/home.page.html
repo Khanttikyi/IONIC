@@ -1,0 +1,135 @@
+<ion-header>
+    <ion-toolbar style="padding-bottom: 13px;">
+        <ion-title style="position: relative;
+        text-align: left;font-size: 23px;top: 7px;">
+          Techno Reward
+        </ion-title>
+        <img src="assets/user.png" style="width: 33px;
+        position: absolute;
+        bottom: 5px;
+        right: 14px;"   routerLink="/profile"/>
+      </ion-toolbar>
+</ion-header>
+
+<ion-content style="text-align: center;margin:0;">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+<!------Coding started here-->
+<!--KTK-->
+<br>
+<!-- <ion-card class="card">
+  <ion-card-subtitle style="font-weight: bold;font-size: 20px;">History</ion-card-subtitle>
+  <ion-card-content style="font-size: 12px;float:left;margin-top:0px;">
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+      Keep close to Nature's heart... and break clear away, once in awhile,
+      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    </ion-card-content>
+  </ion-card> -->
+
+<!-- <div style="text-align: left;padding-left: 40px;">
+  <h1 style="font-weight: bold;font-size: 30px;margin-top:0px;">History</h1>
+  <p style="font-size: 15px;float:left;margin-top:0px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s </p>
+  
+  </div> -->
+
+  <div style="color:black; text-shadow: #000;display: block;" >
+    <b> <span style="float:left;margin-left:30px;" id="pointqr">Points</span></b>
+     <b><span style="float:right;margin-right:30px;font-weight:bold;">20</span></b>
+   </div>
+<br><br>
+
+  <input type="checkbox" id="test"/>
+  <label for="test">
+  <div class="flip-card">
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+
+      </div>
+      <div class="flip-card-back">
+        <div class="back">
+          <div class="card-number">
+            <div class="strip-black"></div>
+            <div class="ccv">
+              <label id="cardno">Card Number</label>
+              1234 5678 99000 2222
+            </div>
+          </div>
+            </div>
+      </div>
+    </div>
+  </div>
+  </label>
+
+  
+  <br><br>
+
+
+
+  <div style="margin-left: auto;margin-right: auto;">
+  <ion-button id ="pay" style="--background:#395975;width:100px;margin-left: 10%;margin-right: 20px;" routerLink="/qrcode">$ Pay</ion-button>
+  <ion-button id="promotion" style="--background:#395975;width:100px;margin-right: 10%;" routerLink="/promotions">Promotion</ion-button>
+  </div>
+<br>
+
+<ion-list style="border-radius: 20px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);">
+    <h1 id="history">History</h1><br>
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="./assets/user.png">
+    </ion-avatar>
+    <ion-label>
+      <h2>Earn 12 Points</h2>
+      <h3>September 18</h3>
+      <p>Location: Yangon</p>
+    </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="./assets/user.png">
+    </ion-avatar>
+    <ion-label>
+        <h2>Earn 12 Points</h2>
+        <h3>September 18</h3>
+        <p>Location: Yangon</p>
+      </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="./assets/user.png">
+    </ion-avatar>
+    <ion-label>
+        <h2>Earn 12 Points</h2>
+        <h3>September 18</h3>
+        <p>Location: Yangon</p>
+      </ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="./assets/user.png">
+    </ion-avatar>
+    <ion-label>
+        <h2>Earn 12 Points</h2>
+        <h3>September 18</h3>
+        <p>Location: Yangon</p>
+      </ion-label>
+  </ion-item>
+  <br>
+</ion-list>
+
+</ion-content>
+
+
+
+
+<ion-footer class="transition" style="display: none;">
+  <ion-toolbar color="undefined" (click)="logout()">
+    <ion-title>
+      Logout
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

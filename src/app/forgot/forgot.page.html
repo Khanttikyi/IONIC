@@ -1,0 +1,47 @@
+
+<ion-content no-padding style="overflow: auto;">
+  <div style="margin-top: 70px;">
+    <ion-card no-margin style="--background:transparent;">
+      <ion-card-content>
+        <ion-row class="row">
+          <div class="fire-logo">
+            <img src="assets/techno_logo.png">
+            <ion-text>
+              <h2 no-margin margin-vertical text-center id="forgetpsws">Forgot your Password ?</h2>
+            </ion-text>
+          </div>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-text><span id="forgetquestion">Enter your email below and we'll send your instructions to recover your password</span></ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-input clearInput type="email" placeholder="Email" [(ngModel)]="email" class="input" padding-horizontal
+              clear-input="true"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-button expand="block" (click)="recover()" color="primary">
+              <strong class="white" id="recover">
+                Recover Password</strong></ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-text class="error" text-center>{{error}}</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-text text-center class="block"><span id="donthaveacc"> Already have an account ?</span>
+              <span class="bold" routerLink="/login" id="loginhere"> Login here</span></ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

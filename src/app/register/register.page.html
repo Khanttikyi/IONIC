@@ -1,0 +1,65 @@
+<ion-content no-padding style="overflow: auto">
+  <div class="">
+      
+          <ion-row class="row">
+              <div class="">
+                <img src="assets/login_pic.gif">
+              </div>
+            </ion-row>
+            <ion-card no-margin style="--background:transparent;">
+                <ion-card-content>
+      
+        
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-item>
+                <ion-label><span id ="gender">Gender</span></ion-label>
+                <ion-select value="m" >
+                  <ion-select-option value="f"><span id="female">Female</span></ion-select-option>
+                  <ion-select-option value="m"><span id="male">Male</span></ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+           <ion-label><span id ="dob">Date Of Birth</span></ion-label>
+           <ion-datetime displayFormat="DD MM YYYY" value="1995-04-15"></ion-datetime>
+         </ion-item>
+        </ion-col>
+      </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-item>
+                <ion-label><span id="township">Township</span></ion-label>
+                <ion-select value="sanchaung">
+                  <ion-select-option value="sanchaung">Sanchaung</ion-select-option>
+                  <ion-select-option value="hlaing">Hlaing</ion-select-option>
+                  <ion-select-option value="sanchaung2">Sanchaung</ion-select-option>
+                  <ion-select-option value="hlaing">Hlaing</ion-select-option>
+                  <ion-select-option value="sanchaung3">Sanchaung</ion-select-option>
+                  <ion-select-option value="hlaing">Hlaing</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <br>
+
+        <ion-row>
+          <ion-col>
+            <ion-button expand="block"  (click)="next()" color="primary">
+              <strong class="white" id="next">
+                Next</strong></ion-button>
+          </ion-col>
+        </ion-row>
+    </ion-card-content>
+    </ion-card>   
+        </div>
+        </ion-content>

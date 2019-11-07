@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+          <ion-buttons slot="start" style="--color:white">
+                <ion-back-button default-href="home" routerDirection="backward" ></ion-back-button>
+          </ion-buttons>
+    <ion-title id ="profile">Profiles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-list lines="none">
+         <ion-item no-lines>
+           <ion-avatar slot="start">
+              <img src="assets/man.png"/>
+           </ion-avatar>
+
+           <!-- <ion-label>
+             <h3 id ="username">Mya Mya</h3>
+           </ion-label> -->
+
+           <!--KTK-->
+           <ion-item *ngIf="user">
+            <ion-label text-wrap>
+              <ion-text>
+                <h2>{{user.displayName}}</h2>
+              </ion-text>
+              </ion-label>
+           </ion-item>
+
+           <!--ion-chip>
+
+             <ion-label style="font-weight:bold;" (click)="txtchange()">Edit</ion-label>
+           </ion-chip-->
+         </ion-item><br>
+         <ion-item routerLink="/typecurrentpass"  routerDirection="forward">
+           <ion-avatar slot="start">
+            <img src="assets/password.png"/>
+           </ion-avatar>
+           <ion-label  id ="change_pass">
+             <h3>Change Password</h3>
+           </ion-label>
+         </ion-item>
+         <ion-item><br>
+           <ion-avatar slot="start">
+          <img src="assets/langauge.png"/>
+           </ion-avatar>
+           <ion-list style="width:100%;">
+              <ion-radio-group>
+                  <ion-item id ="myanmar" >
+                    <ion-label>ျမန္မာဘာသာ</ion-label>
+                    <ion-radio slot="start" value="biff" id="radiomyan"></ion-radio>
+                  </ion-item>
+
+                  <ion-item id="english" >
+                    <ion-label>English</ion-label>
+                    <ion-radio slot="start" value="griff" id="radioeng"></ion-radio>
+                  </ion-item>
+              </ion-radio-group><br>
+        </ion-list>
+
+         </ion-item>
+         <ion-item routerLink="/login" (click)="logout()" routerDirection="forward">
+           <ion-avatar slot="start">
+          <img src="assets/logout.png"/>
+           </ion-avatar>
+           <ion-label id="logout">
+             Logout
+           </ion-label>
+         </ion-item>
+       </ion-list>
+
+</ion-content>

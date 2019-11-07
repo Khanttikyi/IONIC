@@ -1,0 +1,50 @@
+<!-- /**
+* Ionic Firebase Full Auth App  (https://store.enappd.com/product/firebase-starter-full-auth/)
+*
+* Copyright © 2019-present Enappd. All rights reserved.
+*
+* This source code is licensed as per the terms found in the
+* LICENSE.md file in the root directory of this source tree.
+*/  -->
+
+
+<ion-content no-padding style="overflow: auto;">
+  
+    
+  <ion-row class="row">
+    <div class="">
+      <img src="assets/login_pic.gif">
+      <ion-text>
+        <p id="texttochange" no-margin margin-vertical text-center>You need to login again when you want to change the password</p>
+      </ion-text>
+    </div>
+  </ion-row>
+  <div style="padding: 20px;">
+   
+  <ion-row>
+    <ion-col>
+      <ion-input clearInput type="email" placeholder="email" [(ngModel)]="email" class="input" padding-horizontal
+        clear-input="true" *ngIf="user" style="visibility: visible"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-input clearInput type="password" placeholder="password" [(ngModel)]="password" class="input"
+        padding-horizontal clear-input="true"></ion-input>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="block" (click)="login()" color="primary">
+        <strong class="white" id="next">
+          Next</strong></ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-text class="error" text-center>{{error}}</ion-text>
+      <h1 *ngIf="user" id="currentemail" style="visibility: hidden">{{user.email}}</h1>
+    </ion-col>
+  </ion-row>
+</div>
+</ion-content>

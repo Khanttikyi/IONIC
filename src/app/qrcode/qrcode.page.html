@@ -1,0 +1,38 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content><br>
+  <ion-toolbar  class="background-color">
+    <ion-buttons slot="start" (click)='clearInterval()'>
+          <ion-back-button default-href="tab1" routerDirection="backward" ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <hr>
+  
+  <div style="color:#fff;">
+    <span style="float:left;margin-left:30px;" id="qrpoint">Points</span>
+    <span style="float:right;margin-right:30px;font-weight:bold;">20</span>
+  </div>
+  <br>
+  <hr>
+  <div style ="margin-left:30px;color:#fff;">
+  <p style="font-weight : bold;">0010 7654 8462 5554</p>
+  <p style="color: #cecece;font-size: 13px;" id="accnum">Techno Reward Account Number</p>
+<br>
+  <p style="font-weight : bold;" *ngIf="user">{{user.displayName}}</p>
+  <p style="color: #cecece;font-size: 13px;" id="accuser">Techno Reward Account Holder</p>
+  </div><hr>
+
+  <h1 style="color:#fff;text-align:center;" id ="scanqr">Scan QR Code</h1>
+    <div class="card" text-center style="margin:auto;">
+      <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=160x160&chld=L|0"
+           class="qr-code img-thumbnail img-responsive" style="width:73%;margin-left:auto;margin-right: auto;" id="qrimg">
+           <p><span id="expireqr">The QR code will expire in </span><span id="time" style="color:red;"> 3:00 </span><span id="minutes"> minutes</span></p>
+           <ion-button id = "try" style="display: none;">Try Again</ion-button>
+    </div>
+
+    <br> <br>
+
+</ion-content>
